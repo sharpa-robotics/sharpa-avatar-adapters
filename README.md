@@ -1,6 +1,6 @@
 # Sharpa Avatar Adapters
 
-Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This repository contains 14 STEP models and five right-hand transforms.
+Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This repository contains 10 STEP models and five right-hand transforms.
 
 ## Repository Structure
 ```text
@@ -10,20 +10,18 @@ models/
 └── AE01/
     ├── vive_tracker/
     ├── pico_controller/
-    ├── meta_touch_plus/
-    └── meta_touch_pro/
+    └── meta_touch_plus_and_pro/
 ```
 
 | Adapter | Parts | Hand | Model folder | Files |
 | --- | --- | --- | --- | --- |
-| VIVE Tracker / VIVE Ultimate Tracker | Tracker adapter | Shared | [vive_tracker](models/AE01/vive_tracker/) | `AE01_vive_tracker_adapter.step` |
-| PICO controller | Main-hand adapters, robot-arm adapters and covers | Left / right | [pico_controller](models/AE01/pico_controller/) | `AE01_pico_cover_left.step`<br>`AE01_pico_cover_right.step`<br>`AE01_pico_main_hand_adapter_left.step`<br>`AE01_pico_main_hand_adapter_right.step`<br>`AE01_pico_robot_arm_adapter_left.step`<br>`AE01_pico_robot_arm_adapter_right.step` |
-| Meta Quest 3 / Touch Plus | Quest 3 fixture | Unspecified | [meta_touch_plus](models/AE01/meta_touch_plus/) | `AE01_quest_3_fixture.step` |
-| Meta Quest Touch Pro | Main-hand adapters, robot-arm adapters, switch and switch stop | Left / right; switch unspecified | [meta_touch_pro](models/AE01/meta_touch_pro/) | `AE01_touch_pro_main_hand_adapter_left.step`<br>`AE01_touch_pro_main_hand_adapter_right.step`<br>`AE01_touch_pro_robot_arm_adapter_left.step`<br>`AE01_touch_pro_robot_arm_adapter_right.step`<br>`AE01_touch_pro_switch_stop_right.step`<br>`AE01_touch_pro_switch.step` |
+| VIVE Tracker / VIVE Ultimate Tracker | Tracker adapter | Shared | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` |
+| PICO controller | AE01 adapters and covers | Left / right | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` |
+| Meta Quest Touch Plus / Touch Pro | AE01 adapters, switch, switch stop and Touch Plus fixture | Left / right adapters; other parts unspecified | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` |
 
 VIVE Tracker 3.0 and VIVE Ultimate Tracker share the VIVE adapter according to the source document, but use different transforms. The Ultimate assembly also uses its mounting base, which is not keyed against reversed insertion; confirm its installation orientation.
 
-The exact PICO controller generation is unspecified. The Quest 3 / Touch Plus model is a fixture only; its handedness and complete assembly are unresolved. Touch Plus and Touch Pro parts are not established as interchangeable.
+The exact PICO controller generation is unspecified. Meta Quest Touch Plus and Touch Pro parts are grouped in `meta_touch_plus_and_pro`; `meta_touch_plus_fixture.step` is the Touch Plus fixture. Fit and complete assembly compatibility still require verification.
 
 Physical fit, retention and calibration have not been verified. Confirm the AE01 interface revision, model, hand and assembly orientation before use. Left-hand model availability does not provide a left-hand calibration.
 
@@ -92,8 +90,6 @@ These matrices are unvalidated and are not bound to a verified CAD revision. The
 [  0.078244  -0.99322    0.085959  -37.87  ]
 [  0         0          0           1     ]
 ```
-
-Matrix source: the project multi-tracker coordinate table, revision 390, retrieved on 2026-11-10.
 
 ## License and support
 
