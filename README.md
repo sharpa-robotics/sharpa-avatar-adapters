@@ -4,23 +4,32 @@ Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This r
 
 ## Repository Structure
 ```text
-README.md
-LICENSE
-assembly_photos/
-models/
-└── AE01/
-    ├── vive_tracker/
-    ├── pico_controller/
-    └── meta_touch_plus_and_pro/
+.
+├── assembly_photos/
+├── models/
+│   └── AE01/
+│       ├── vive_tracker/
+│       ├── pico_controller/
+│       └── meta_touch_plus_and_pro/
+├── LICENSE
+└── README.md
 ```
 
-| Trackers | Model folder | Files | Assembly instructions |
-| --- | --- | --- | --- |
-| VIVE&nbsp;Tracker<br>VIVE&nbsp;Ultimate&nbsp;Tracker | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` | Photos pending |
-| PICO&nbsp;controller | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` | Photos pending |
-| Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` | <a href="assembly_photos/meta_touch_assembly_01.png"><img src="assembly_photos/meta_touch_assembly_01.png" alt="Meta Quest Touch adapter assembly, exterior view" width="240"></a><br><a href="assembly_photos/meta_touch_assembly_02.png"><img src="assembly_photos/meta_touch_assembly_02.png" alt="Meta Quest Touch adapter assembly, interior view" width="240"></a> |
+| Trackers | Model folder | Files |
+| --- | --- | --- |
+| VIVE&nbsp;Tracker<br>VIVE&nbsp;Ultimate&nbsp;Tracker | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` |
+| PICO&nbsp;controller | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` |
+| Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` |
 
-Assembly photos are stored in [assembly_photos/](assembly_photos/). Click a photo in the table to view it at full size.
+## Assembly
+
+### Meta Quest Touch Plus/Pro
+
+Click an image to view it at full size. Assembly photos are stored in [assembly_photos/](assembly_photos/).
+
+[![Meta Quest Touch Plus/Pro adapter assembly, exterior view](assembly_photos/meta_touch_assembly_01.png)](assembly_photos/meta_touch_assembly_01.png)
+
+[![Meta Quest Touch Plus/Pro adapter assembly, interior view](assembly_photos/meta_touch_assembly_02.png)](assembly_photos/meta_touch_assembly_02.png)
 
 
 ## Coordinate transforms
