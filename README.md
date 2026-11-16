@@ -29,11 +29,11 @@ Required purchased parts:
 
 | No. | Name | Quantity | Link |
 | --- | --- | --- | --- |
-| 1 | Low-profile head self-tapping screw, 2.0 × 3.0 mm | 2 | [Tmall](https://detail.tmall.com/item.htm?id=769997219983&skuId=5610253119978) |
-| 2 | Low-profile head self-tapping screw, 1.2 × 2.5 mm | 2 | [Tmall](https://detail.tmall.com/item.htm?id=672312875866&skuId=5005897262292) |
-| 3 | Hook-and-loop fastener | As needed | [Taobao](https://item.taobao.com/item.htm?id=973485212347&skuId=6117318143425) |
-| 4 | Single-sided EVA foam tape, 0.5 mm thick | As needed | [Taobao](https://item.taobao.com/item.htm?id=869810148755&skuId=5697737852507) |
-| 5 | Spring-loaded ball plunger with collar, Ø4 × 5 mm | 2 | [Tmall](https://detail.tmall.com/item.htm?id=1009059142232&skuId=6206482278045) |
+| 1 | Low-profile head self-tapping screw, 2.0 × 3.0 mm | 2 | [link](https://detail.tmall.com/item.htm?id=769997219983&skuId=5610253119978) |
+| 2 | Low-profile head self-tapping screw, 1.2 × 2.5 mm | 2 | [link](https://detail.tmall.com/item.htm?id=672312875866&skuId=5005897262292) |
+| 3 | Hook-and-loop fastener, 5 mm in width     | As needed | [link](https://item.taobao.com/item.htm?id=973485212347&skuId=6117318143425) |
+| 4 | Single-sided EVA foam tape, 0.5 mm thick | As needed | [link](https://item.taobao.com/item.htm?id=869810148755&skuId=5697737852507) |
+| 5 | Spring-loaded ball plunger with collar, Ø4 × 5 mm | 2 | [link](https://detail.tmall.com/item.htm?id=1009059142232&skuId=6206482278045) |
 
 <p>
   <a href="assembly_photos/meta_touch_assembly_01.png"><img src="assembly_photos/meta_touch_assembly_01.png" alt="Meta Quest Touch Plus/Pro adapter assembly, exterior view" width="32%"></a>
