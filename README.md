@@ -1,58 +1,115 @@
-# Sharpa Avatar Tracker Mounts
+# Sharpa Avatar Adapters
 
-Mechanical adapters and coordinate transforms for integrating external trackers and VR controllers with the Sharpa Avatar hand mount.
+Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This repository contains 14 STEP models and five right-hand transforms.
 
-[GitHub repository](https://github.com/sharpa-robotics/sharpa-avatar-tracker-mounts) · [中文说明](README.zh-CN.md) · [Download catalog](CATALOG.md) · [Coordinate conventions](docs/coordinate-systems.md) · [Support](SUPPORT.md)
+## Models
 
-**Public preview — hardware validation is pending.** The CAD files and five right-hand matrices were collected from the project sources on 2026-11-10. Physical fit, retention and pose accuracy have not been verified here. Left-hand CAD availability does not imply a left-hand calibration. Licensing is pending owner review; see [LICENSE](LICENSE).
-
-## Find your device
-
-| Device | Mechanical files and scope | Calibration |
-|---|---|---|
-| [VIVE Tracker 3.0](products/vive-tracker/README.md) | STEP available; fit test pending | [Right / draft](transforms/vive-tracker/right.json) |
-| [VIVE Ultimate Tracker](products/vive-ultimate-tracker/README.md) | Shared VIVE adapter per source document; mounting orientation must be checked | [Right / draft](transforms/vive-ultimate-tracker/right.json) |
-| [PICO controller](products/pico-controller/README.md) | Left/right main-hand, robot-arm adapters and covers; fit test pending | [Right / draft](transforms/pico-controller/right.json) |
-| [Meta Quest 3 / Touch Plus](products/meta-touch-plus/README.md) | Quest 3 fixture only; complete assembly mapping pending | [Right / draft](transforms/meta-touch-plus/right.json) |
-| [Meta Quest Touch Pro](products/meta-touch-pro/README.md) | Left/right main-hand and robot-arm adapters plus switch parts; fit test pending | [Right / draft](transforms/meta-touch-pro/right.json) |
-
-There are **14 STEP files**. The first version covers tracker/controller adapters. URDF and robot models are outside this repository's initial scope.
-
-## Quick start
-
-1. Select your device above. Check the controller generation, hand and glove interface revision.
-2. Download files from the [catalog](CATALOG.md), or use GitHub **Code → Download ZIP** from the repository page. Use STEP for neutral CAD interchange.
-3. Follow the product guide and [assembly workflow](docs/installation.md). Confirm fit and retention before a motion test. Print settings, screw lengths and torques still require hardware-owner confirmation.
-4. Read the [coordinate contract](docs/coordinate-systems.md). The JSON translation unit is **metres**; the source matrix translations are recorded separately as interpreted **millimetres**. Matrices map tracker coordinates into `right_hand_mount_frame`.
-5. Run the offline example with Python 3.10 or later. There are no third-party Python dependencies:
-
-```console
-python examples/transform_pose.py --product vive-tracker --point 0 0 0 --allow-unvalidated
-python tools/validate_repository.py
-python -m unittest discover -s tests -v
-```
-
-The example returns `[-0.0105, 0.0, 0.0175]` metres for the VIVE tracker origin. `--allow-unvalidated` explicitly acknowledges the draft calibration; it does not mark any hardware verified.
-
-## Repository layout
+All STEP models use **millimetres (mm)**. Adapter folders use English `lowercase_with_underscores`. Model filenames use the `AE01_` prefix followed by an English `lowercase_with_underscores` name; `AE01` is the product identifier.
 
 ```text
-products/<device>/       device guide, product metadata, cad/*.step
-transforms/<device>/     right.json: frame names, units, matrix and source status
-catalog/                machine-readable product list and asset hashes
-docs/                   coordinates, assembly, validation, references and licensing
-examples/               offline point / pose conversion example
-tools/                  transform helpers and repository checker
-tests/                  transform direction, units and inverse tests
-.github/                issue template and validation workflow
-LICENSE                 current license status
-licenses/               proposed license text for review
+README.md
+LICENSE
+models/
+└── AE01/
+    ├── vive_tracker/
+    ├── pico_controller/
+    ├── meta_touch_plus/
+    └── meta_touch_pro/
 ```
 
-All model paths are relative. Git LFS is not required for this snapshot. Preserve filenames and directory structure so catalog links and checksums remain valid.
+| Adapter | Part | Hand | Model |
+| --- | --- | --- | --- |
+| VIVE Tracker / VIVE Ultimate Tracker | Tracker adapter | Shared | [AE01_vive_tracker_adapter.step](models/AE01/vive_tracker/AE01_vive_tracker_adapter.step) |
+| PICO controller | Main-hand adapter | Left | [AE01_pico_main_hand_adapter_left.step](models/AE01/pico_controller/AE01_pico_main_hand_adapter_left.step) |
+| PICO controller | Main-hand adapter | Right | [AE01_pico_main_hand_adapter_right.step](models/AE01/pico_controller/AE01_pico_main_hand_adapter_right.step) |
+| PICO controller | Robot-arm adapter | Left | [AE01_pico_robot_arm_adapter_left.step](models/AE01/pico_controller/AE01_pico_robot_arm_adapter_left.step) |
+| PICO controller | Robot-arm adapter | Right | [AE01_pico_robot_arm_adapter_right.step](models/AE01/pico_controller/AE01_pico_robot_arm_adapter_right.step) |
+| PICO controller | Cover | Left | [AE01_pico_cover_left.step](models/AE01/pico_controller/AE01_pico_cover_left.step) |
+| PICO controller | Cover | Right | [AE01_pico_cover_right.step](models/AE01/pico_controller/AE01_pico_cover_right.step) |
+| Meta Quest 3 / Touch Plus | Quest 3 fixture | Unspecified | [AE01_quest_3_fixture.step](models/AE01/meta_touch_plus/AE01_quest_3_fixture.step) |
+| Meta Quest Touch Pro | Main-hand adapter | Left | [AE01_touch_pro_main_hand_adapter_left.step](models/AE01/meta_touch_pro/AE01_touch_pro_main_hand_adapter_left.step) |
+| Meta Quest Touch Pro | Main-hand adapter | Right | [AE01_touch_pro_main_hand_adapter_right.step](models/AE01/meta_touch_pro/AE01_touch_pro_main_hand_adapter_right.step) |
+| Meta Quest Touch Pro | Robot-arm adapter | Left | [AE01_touch_pro_robot_arm_adapter_left.step](models/AE01/meta_touch_pro/AE01_touch_pro_robot_arm_adapter_left.step) |
+| Meta Quest Touch Pro | Robot-arm adapter | Right | [AE01_touch_pro_robot_arm_adapter_right.step](models/AE01/meta_touch_pro/AE01_touch_pro_robot_arm_adapter_right.step) |
+| Meta Quest Touch Pro | Switch part | Unspecified | [AE01_touch_pro_switch.step](models/AE01/meta_touch_pro/AE01_touch_pro_switch.step) |
+| Meta Quest Touch Pro | Switch stop | Right | [AE01_touch_pro_switch_stop_right.step](models/AE01/meta_touch_pro/AE01_touch_pro_switch_stop_right.step) |
 
-## Contact and license
+VIVE Tracker 3.0 and VIVE Ultimate Tracker share the VIVE adapter according to the source document, but use different transforms. The Ultimate assembly also uses its mounting base, which is not keyed against reversed insertion; confirm its installation orientation.
 
-Hardware and integration support: **[support@sharpa.com](mailto:support@sharpa.com)**, as listed in the Avatar user manual. Include the device, hand, glove revision, CAD filename and observed issue; see [SUPPORT.md](SUPPORT.md).
+The exact PICO controller generation is unspecified. The Quest 3 / Touch Plus model is a fixture only; its handedness and complete assembly are unresolved. Touch Plus and Touch Pro parts are not established as interchangeable.
 
-An [MIT license candidate](licenses/MIT.proposed.txt) is included for owner review. It is **not an active license grant**. The final copyright holder, license choice and model coverage remain pending. Public visibility does not itself grant an open-source license. Vendor device models and SDKs remain under their own terms; this repository links to them in [references](docs/references.md).
+Physical fit, retention and calibration have not been verified. Confirm the AE01 interface revision, model, hand and assembly orientation before use. Left-hand model availability does not provide a left-hand calibration.
+
+## Coordinate transforms
+
+All five matrices below are **right-hand** transforms named `T_mount_tracker`. They map tracker/controller coordinates into `right_hand_mount_frame` using homogeneous column vectors:
+
+```text
+p_mount = T_mount_tracker @ p_tracker
+
+T_mount_tracker = [ R  t ]
+                  [ 0  1 ]
+
+T_world_mount = T_world_tracker @ inverse(T_mount_tracker)
+```
+
+Each column of `R` is a positive tracker basis axis expressed in mount coordinates. The source drawing places the mount origin at the midpoint of an edge on the interface bottom face, with axes parallel to `right_hand_virtual_base_frame`. A newer manual marks an upper-edge midpoint; the hardware revision correspondence is unresolved.
+
+**Translation unit: mm.** The VIVE derivation explicitly uses millimetres; the other translations are interpreted as millimetres from the same source table and CAD units, pending confirmation. For metre-based calculations, divide only the first three entries of the last column by 1000. Leave the rotation and bottom row unchanged, and use the same length unit for points and poses.
+
+The source values and rounded rotations are preserved below. Use a matrix inverse when reversing the transform. For example, the VIVE Tracker origin maps to `[-10.5, 0, 17.5]` mm, or `[-0.0105, 0, 0.0175]` m, in the mount frame.
+
+These matrices are unvalidated and are not bound to a verified CAD revision. The runtime pose reference is unconfirmed: reconcile tracking, grip or aim frames before use. No left-hand transforms are supplied; do not infer them by mirroring the right-hand matrices. World-to-robot registration is outside the supplied transforms.
+
+### VIVE Tracker 3.0
+
+```text
+[ 0  -1  0  -10.5 ]
+[ 1   0  0    0   ]
+[ 0   0  1   17.5 ]
+[ 0   0  0    1   ]
+```
+
+### VIVE Ultimate Tracker
+
+```text
+[ -1   0  0  -20.6 ]
+[  0  -1  0    0   ]
+[  0   0  1  -19.1 ]
+[  0   0  0    1   ]
+```
+
+### PICO controller
+
+```text
+[ -0.99871     0.050223   0.0069817   -8.0421 ]
+[  0.0037749   0.21095   -0.97749    15.278  ]
+[ -0.050566   -0.97621   -0.21087   -59.188  ]
+[  0          0          0           1      ]
+```
+
+### Meta Quest 3 / Touch Plus
+
+```text
+[ -0.98798   -0.085132   0.12907   -24.981 ]
+[ -0.1244    -0.05803   -0.99053    46.203 ]
+[  0.091816  -0.99468    0.046742  -38.765 ]
+[  0         0          0           1     ]
+```
+
+### Meta Quest Touch Pro
+
+```text
+[ -0.99205   -0.069042   0.10526   -23.086 ]
+[ -0.098608  -0.093511  -0.99072    48.502 ]
+[  0.078244  -0.99322    0.085959  -37.87  ]
+[  0         0          0           1     ]
+```
+
+Matrix source: the project multi-tracker coordinate table, revision 390, retrieved on 2026-11-10.
+
+## License and support
+
+See [LICENSE](LICENSE) for the current license status, which remains pending owner review.
+
+Hardware and integration support: [support@sharpa.com](mailto:support@sharpa.com).
