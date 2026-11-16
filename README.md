@@ -6,6 +6,7 @@ Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This r
 ```text
 README.md
 LICENSE
+assembly_photos/
 models/
 └── AE01/
     ├── vive_tracker/
@@ -13,18 +14,19 @@ models/
     └── meta_touch_plus_and_pro/
 ```
 
-| Trackers | Model folder | Files |
-| --- | --- | --- |
-| VIVE&nbsp;Tracker<br>VIVE&nbsp;Ultimate&nbsp;Tracker | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` |
-| PICO&nbsp;controller | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` |
-| Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` |
+| Trackers | Model folder | Files | Assembly instructions |
+| --- | --- | --- | --- |
+| VIVE&nbsp;Tracker<br>VIVE&nbsp;Ultimate&nbsp;Tracker | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` | Photos pending |
+| PICO&nbsp;controller | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` | Photos pending |
+| Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` | Photos pending |
+
+Assembly photos are stored in [assembly_photos/](assembly_photos/) and will be displayed in the table above.
 
 
 ## Coordinate transforms
 
 All five matrices below are **right-hand** transforms named `T_mount_tracker`. They map tracker/controller coordinates into `right_hand_mount_frame` using homogeneous column vectors:
-
-```text
+```t
 p_mount = T_mount_tracker @ p_tracker
 
 T_mount_tracker = [ R  t ]
@@ -33,13 +35,7 @@ T_mount_tracker = [ R  t ]
 T_world_mount = T_world_tracker @ inverse(T_mount_tracker)
 ```
 
-Each column of `R` is a positive tracker basis axis expressed in mount coordinates. The source drawing places the mount origin at the midpoint of an edge on the interface bottom face, with axes parallel to `right_hand_virtual_base_frame`. A newer manual marks an upper-edge midpoint; the hardware revision correspondence is unresolved.
-
-**Translation unit: mm.** The VIVE derivation explicitly uses millimetres; the other translations are interpreted as millimetres from the same source table and CAD units, pending confirmation. For metre-based calculations, divide only the first three entries of the last column by 1000. Leave the rotation and bottom row unchanged, and use the same length unit for points and poses.
-
-The source values and rounded rotations are preserved below. Use a matrix inverse when reversing the transform. For example, the VIVE Tracker origin maps to `[-10.5, 0, 17.5]` mm, or `[-0.0105, 0, 0.0175]` m, in the mount frame.
-
-These matrices are unvalidated and are not bound to a verified CAD revision. The runtime pose reference is unconfirmed: reconcile tracking, grip or aim frames before use. No left-hand transforms are supplied; do not infer them by mirroring the right-hand matrices. World-to-robot registration is outside the supplied transforms.
+Each column of `R` is a positive tracker basis axis expressed in mount coordinates. Translation unit is mm.
 
 ### VIVE Tracker 3.0
 
@@ -68,7 +64,7 @@ These matrices are unvalidated and are not bound to a verified CAD revision. The
 [  0          0          0           1      ]
 ```
 
-### Meta Quest 3 / Touch Plus
+### Meta Touch Plus
 
 ```text
 [ -0.98798   -0.085132   0.12907   -24.981 ]
