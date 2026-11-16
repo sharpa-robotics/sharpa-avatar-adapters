@@ -36,8 +36,9 @@ Required purchased parts:
 | 5 | Spring-loaded ball plunger with collar, Ø4 × 5 mm, 304 stainless steel ball | TBD | TBD |
 
 <p>
-  <a href="assembly_photos/meta_touch_assembly_01.png"><img src="assembly_photos/meta_touch_assembly_01.png" alt="Meta Quest Touch Plus/Pro adapter assembly, exterior view" width="49%"></a>
-  <a href="assembly_photos/meta_touch_assembly_02.png"><img src="assembly_photos/meta_touch_assembly_02.png" alt="Meta Quest Touch Plus/Pro adapter assembly, interior view" width="49%"></a>
+  <a href="assembly_photos/meta_touch_assembly_01.png"><img src="assembly_photos/meta_touch_assembly_01.png" alt="Meta Quest Touch Plus/Pro adapter assembly, exterior view" width="32%"></a>
+  <a href="assembly_photos/meta_touch_assembly_02.png"><img src="assembly_photos/meta_touch_assembly_02.png" alt="Meta Quest Touch Plus/Pro adapter assembly, interior view" width="32%"></a>
+  <a href="assembly_photos/meta_touch_assembly_03.png"><img src="assembly_photos/meta_touch_assembly_03.png" alt="Hook-and-loop fastening strap, part 3" width="32%"></a>
 </p>
 
 ## Coordinate transforms
