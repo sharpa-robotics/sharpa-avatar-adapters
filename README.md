@@ -2,10 +2,7 @@
 
 Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This repository contains 14 STEP models and five right-hand transforms.
 
-## Models
-
-All STEP models use **millimetres (mm)**. Adapter folders use English `lowercase_with_underscores`. Model filenames use the `AE01_` prefix followed by an English `lowercase_with_underscores` name; `AE01` is the product identifier.
-
+## Repository Structure
 ```text
 README.md
 LICENSE
@@ -17,22 +14,12 @@ models/
     └── meta_touch_pro/
 ```
 
-| Adapter | Part | Hand | Model |
-| --- | --- | --- | --- |
-| VIVE Tracker / VIVE Ultimate Tracker | Tracker adapter | Shared | [AE01_vive_tracker_adapter.step](models/AE01/vive_tracker/AE01_vive_tracker_adapter.step) |
-| PICO controller | Main-hand adapter | Left | [AE01_pico_main_hand_adapter_left.step](models/AE01/pico_controller/AE01_pico_main_hand_adapter_left.step) |
-| PICO controller | Main-hand adapter | Right | [AE01_pico_main_hand_adapter_right.step](models/AE01/pico_controller/AE01_pico_main_hand_adapter_right.step) |
-| PICO controller | Robot-arm adapter | Left | [AE01_pico_robot_arm_adapter_left.step](models/AE01/pico_controller/AE01_pico_robot_arm_adapter_left.step) |
-| PICO controller | Robot-arm adapter | Right | [AE01_pico_robot_arm_adapter_right.step](models/AE01/pico_controller/AE01_pico_robot_arm_adapter_right.step) |
-| PICO controller | Cover | Left | [AE01_pico_cover_left.step](models/AE01/pico_controller/AE01_pico_cover_left.step) |
-| PICO controller | Cover | Right | [AE01_pico_cover_right.step](models/AE01/pico_controller/AE01_pico_cover_right.step) |
-| Meta Quest 3 / Touch Plus | Quest 3 fixture | Unspecified | [AE01_quest_3_fixture.step](models/AE01/meta_touch_plus/AE01_quest_3_fixture.step) |
-| Meta Quest Touch Pro | Main-hand adapter | Left | [AE01_touch_pro_main_hand_adapter_left.step](models/AE01/meta_touch_pro/AE01_touch_pro_main_hand_adapter_left.step) |
-| Meta Quest Touch Pro | Main-hand adapter | Right | [AE01_touch_pro_main_hand_adapter_right.step](models/AE01/meta_touch_pro/AE01_touch_pro_main_hand_adapter_right.step) |
-| Meta Quest Touch Pro | Robot-arm adapter | Left | [AE01_touch_pro_robot_arm_adapter_left.step](models/AE01/meta_touch_pro/AE01_touch_pro_robot_arm_adapter_left.step) |
-| Meta Quest Touch Pro | Robot-arm adapter | Right | [AE01_touch_pro_robot_arm_adapter_right.step](models/AE01/meta_touch_pro/AE01_touch_pro_robot_arm_adapter_right.step) |
-| Meta Quest Touch Pro | Switch part | Unspecified | [AE01_touch_pro_switch.step](models/AE01/meta_touch_pro/AE01_touch_pro_switch.step) |
-| Meta Quest Touch Pro | Switch stop | Right | [AE01_touch_pro_switch_stop_right.step](models/AE01/meta_touch_pro/AE01_touch_pro_switch_stop_right.step) |
+| Adapter | Parts | Hand | Model folder | Files |
+| --- | --- | --- | --- | --- |
+| VIVE Tracker / VIVE Ultimate Tracker | Tracker adapter | Shared | [vive_tracker](models/AE01/vive_tracker/) | `AE01_vive_tracker_adapter.step` |
+| PICO controller | Main-hand adapters, robot-arm adapters and covers | Left / right | [pico_controller](models/AE01/pico_controller/) | `AE01_pico_cover_left.step`<br>`AE01_pico_cover_right.step`<br>`AE01_pico_main_hand_adapter_left.step`<br>`AE01_pico_main_hand_adapter_right.step`<br>`AE01_pico_robot_arm_adapter_left.step`<br>`AE01_pico_robot_arm_adapter_right.step` |
+| Meta Quest 3 / Touch Plus | Quest 3 fixture | Unspecified | [meta_touch_plus](models/AE01/meta_touch_plus/) | `AE01_quest_3_fixture.step` |
+| Meta Quest Touch Pro | Main-hand adapters, robot-arm adapters, switch and switch stop | Left / right; switch unspecified | [meta_touch_pro](models/AE01/meta_touch_pro/) | `AE01_touch_pro_main_hand_adapter_left.step`<br>`AE01_touch_pro_main_hand_adapter_right.step`<br>`AE01_touch_pro_robot_arm_adapter_left.step`<br>`AE01_touch_pro_robot_arm_adapter_right.step`<br>`AE01_touch_pro_switch_stop_right.step`<br>`AE01_touch_pro_switch.step` |
 
 VIVE Tracker 3.0 and VIVE Ultimate Tracker share the VIVE adapter according to the source document, but use different transforms. The Ultimate assembly also uses its mounting base, which is not keyed against reversed insertion; confirm its installation orientation.
 
