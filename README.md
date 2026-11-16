@@ -25,12 +25,20 @@ Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This r
 
 ### Meta Quest Touch Plus/Pro
 
-Click an image to view it at full size. Assembly photos are stored in [assembly_photos/](assembly_photos/).
+Required purchased parts:
 
-[![Meta Quest Touch Plus/Pro adapter assembly, exterior view](assembly_photos/meta_touch_assembly_01.png)](assembly_photos/meta_touch_assembly_01.png)
+| No. | Name | Quantity | Link |
+| --- | --- | --- | --- |
+| 1 | Low-profile head self-tapping screw, 2.0 × 3.0 mm | TBD | TBD |
+| 2 | Low-profile head self-tapping screw, 1.2 × 2.5 mm | TBD | TBD |
+| 3 | Hook-and-loop fastener | TBD | TBD |
+| 4 | Single-sided EVA foam tape, 0.5 mm thick | TBD | TBD |
+| 5 | Spring-loaded ball plunger with collar, Ø4 × 5 mm, 304 stainless steel ball | TBD | TBD |
 
-[![Meta Quest Touch Plus/Pro adapter assembly, interior view](assembly_photos/meta_touch_assembly_02.png)](assembly_photos/meta_touch_assembly_02.png)
-
+<p>
+  <a href="assembly_photos/meta_touch_assembly_01.png"><img src="assembly_photos/meta_touch_assembly_01.png" alt="Meta Quest Touch Plus/Pro adapter assembly, exterior view" width="49%"></a>
+  <a href="assembly_photos/meta_touch_assembly_02.png"><img src="assembly_photos/meta_touch_assembly_02.png" alt="Meta Quest Touch Plus/Pro adapter assembly, interior view" width="49%"></a>
+</p>
 
 ## Coordinate transforms
 
