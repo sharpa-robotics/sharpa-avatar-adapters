@@ -13,17 +13,12 @@ models/
     └── meta_touch_plus_and_pro/
 ```
 
-| Adapter | Parts | Hand | Model folder | Files |
-| --- | --- | --- | --- | --- |
-| VIVE&nbsp;Tracker<br>VIVE&nbsp;Ultimate&nbsp;Tracker | Tracker adapter | Shared | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` |
-| PICO&nbsp;controller | AE01 adapters and covers | Left / right | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` |
-| Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | AE01 adapters, switch, switch stop and Touch Plus fixture | Left / right adapters; other parts unspecified | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` |
+| Trackers | Model folder | Files |
+| --- | --- | --- |
+| VIVE&nbsp;Tracker<br>VIVE&nbsp;Ultimate&nbsp;Tracker | [vive_tracker](models/AE01/vive_tracker/) | `vive_tracker_adapter_AE01.step` |
+| PICO&nbsp;controller | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` |
+| Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` |
 
-VIVE Tracker 3.0 and VIVE Ultimate Tracker share the VIVE adapter according to the source document, but use different transforms. The Ultimate assembly also uses its mounting base, which is not keyed against reversed insertion; confirm its installation orientation.
-
-The exact PICO controller generation is unspecified. Meta Quest Touch Plus and Touch Pro parts are grouped in `meta_touch_plus_and_pro`; `meta_touch_plus_fixture.step` is the Touch Plus fixture. Fit and complete assembly compatibility still require verification.
-
-Physical fit, retention and calibration have not been verified. Confirm the AE01 interface revision, model, hand and assembly orientation before use. Left-hand model availability does not provide a left-hand calibration.
 
 ## Coordinate transforms
 
