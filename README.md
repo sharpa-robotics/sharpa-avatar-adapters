@@ -3,7 +3,7 @@
 Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This repository contains 10 STEP models and five right-hand transforms.
 
 ## Repository Structure
-```text
+```te
 .
 ├── assembly_photos/
 ├── models/
@@ -21,7 +21,7 @@ Mechanical adapters and coordinate transforms for the Sharpa Avatar AE01. This r
 | PICO&nbsp;controller | [pico_controller](models/AE01/pico_controller/) | `pico_adapter_AE01_left.step`<br>`pico_adapter_AE01_right.step`<br>`pico_cover_AE01_left.step`<br>`pico_cover_AE01_right.step` |
 | Meta&nbsp;Quest&nbsp;Touch&nbsp;Plus<br>Meta&nbsp;Quest&nbsp;Touch&nbsp;Pro | [meta_touch_plus_and_pro](models/AE01/meta_touch_plus_and_pro/) | `meta_touch_plus_and_pro_adapter_AE01_left.step`<br>`meta_touch_plus_and_pro_adapter_AE01_right.step`<br>`meta_touch_plus_and_pro_switch_AE01.step`<br>`meta_touch_plus_and_pro_switch_stop_AE01.step`<br>`meta_touch_plus_fixture.step` |
 
-## Assembly
+## Assembly Instruction
 
 ### Meta Quest Touch Plus/Pro
 
@@ -29,11 +29,11 @@ Required purchased parts:
 
 | No. | Name | Quantity | Link |
 | --- | --- | --- | --- |
-| 1 | Low-profile head self-tapping screw, 2.0 × 3.0 mm | TBD | TBD |
-| 2 | Low-profile head self-tapping screw, 1.2 × 2.5 mm | TBD | TBD |
-| 3 | Hook-and-loop fastener | TBD | TBD |
-| 4 | Single-sided EVA foam tape, 0.5 mm thick | TBD | TBD |
-| 5 | Spring-loaded ball plunger with collar, Ø4 × 5 mm, 304 stainless steel ball | TBD | TBD |
+| 1 | Low-profile head self-tapping screw, 2.0 × 3.0 mm | 2 | [Tmall](https://detail.tmall.com/item.htm?id=769997219983&skuId=5610253119978) |
+| 2 | Low-profile head self-tapping screw, 1.2 × 2.5 mm | 2 | [Tmall](https://detail.tmall.com/item.htm?id=672312875866&skuId=5005897262292) |
+| 3 | Hook-and-loop fastener | As needed | [Taobao](https://item.taobao.com/item.htm?id=973485212347&skuId=6117318143425) |
+| 4 | Single-sided EVA foam tape, 0.5 mm thick | As needed | [Taobao](https://item.taobao.com/item.htm?id=869810148755&skuId=5697737852507) |
+| 5 | Spring-loaded ball plunger with collar, Ø4 × 5 mm | 2 | [Tmall](https://detail.tmall.com/item.htm?id=1009059142232&skuId=6206482278045) |
 
 <p>
   <a href="assembly_photos/meta_touch_assembly_01.png"><img src="assembly_photos/meta_touch_assembly_01.png" alt="Meta Quest Touch Plus/Pro adapter assembly, exterior view" width="32%"></a>
@@ -82,7 +82,7 @@ Each column of `R` is a positive tracker basis axis expressed in mount coordinat
 [  0          0          0           1      ]
 ```
 
-### Meta Touch Plus
+### Meta Quest Touch Plus
 
 ```text
 [ -0.98798   -0.085132   0.12907   -24.981 ]
